@@ -1,7 +1,7 @@
 import pytest
 
 @pytest.fixture(scope='module')
-def secondwork():
+def prework():
 	print("i setup browser instance")
 	yield
 	print("i teardown browser instance")
