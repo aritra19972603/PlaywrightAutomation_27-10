@@ -1,6 +1,6 @@
 import time
 
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 import pytest
 
 
@@ -24,7 +24,15 @@ def test_coreLocators(page: Page):
 	page.get_by_role("link",name="terms and conditions").click()
 	page.locator("#terms").check()
 	page.get_by_role("button", name="Sign In").click()
-	time.sleep(5)
+	#expect(page.get_by_text("Incorrect  username/password.")).to_be_visible()
+
+
+	time.sleep(2)
+
+
+	
+
+
 
 
 
